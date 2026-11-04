@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Робота з освітнім порталом</title>
+<style>
+:root{--teal:#087f8c;--teal2:#e8f5f6;--ink:#20323a;--muted:#62747c;--line:#dce6e8;--bg:#f4f7f8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:16px/1.5 Arial,sans-serif;color:var(--ink)}
+header{background:#fff;border-bottom:1px solid var(--line);padding:16px max(22px,calc((100% - 1120px)/2));display:flex;justify-content:space-between;align-items:center;gap:20px}
+.brand{font-weight:700;color:var(--teal)}.pill{background:var(--teal2);color:var(--teal);padding:5px 12px;border-radius:20px;font-size:13px}
+.wrap{max-width:1120px;margin:28px auto;padding:0 22px;display:grid;grid-template-columns:260px 1fr;gap:24px}
+nav,.panel,.card{background:#fff;border:1px solid var(--line);border-radius:14px}
+nav{padding:18px;height:max-content;position:sticky;top:18px}nav h3{margin:0 0 12px;font-size:16px}
+nav button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:11px 12px;margin:3px 0;border-radius:9px;color:var(--ink);cursor:pointer;font-size:14px}
+nav button.active,nav button:hover{background:var(--teal2);color:var(--teal);font-weight:700}
+main{min-width:0}.hero{background:linear-gradient(120deg,#087f8c,#0c9ba4);color:white;border-radius:16px;padding:28px;margin-bottom:18px}
+.hero h1{font-size:28px;line-height:1.2;margin:8px 0}.hero p{max-width:700px;margin:8px 0 0;color:#eafafb}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.stat{background:#ffffff20;border:1px solid #ffffff40;border-radius:10px;padding:9px 13px;font-size:13px}
+.panel{padding:22px;margin-bottom:16px}.panel h2{margin:0 0 10px;font-size:21px}.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{padding:16px}.card h3{margin:0 0 6px;font-size:16px}.tag{font-size:12px;color:var(--teal);font-weight:700}
+button.primary{background:var(--teal);color:white;border:0;border-radius:8px;padding:10px 15px;cursor:pointer;font-weight:700}
+button.secondary{background:var(--teal2);color:var(--teal);border:0;border-radius:8px;padding:10px 15px;cursor:pointer;font-weight:700}
+ul{padding-left:22px}li{margin:5px 0}.step{padding:12px;border-left:4px solid var(--teal);background:#f5fafb;margin:9px 0;border-radius:0 8px 8px 0}
+.progress{height:8px;background:#e8eef0;border-radius:8px;overflow:hidden}.progress span{display:block;width:0;height:100%;background:var(--teal);transition:.2s}
+.hidden{display:none}.feedback{padding:12px;background:#f2f8f2;border:1px solid #cfe6d0;border-radius:8px;margin-top:12px}
+footer{text-align:center;color:var(--muted);padding:24px;font-size:13px}
+@media(max-width:760px){.wrap{grid-template-columns:1fr;margin:16px auto}nav{position:static}.grid{grid-template-columns:1fr}.hero h1{font-size:23px}header{align-items:flex-start;flex-direction:column}}
+</style></head>
+<body>
+<header><div class="brand">Навчальний простір · Електронний курс</div><span class="pill">Прототип курсу</span></header>
+<div class="wrap">
+<nav>
+<h3>Навігація курсу</h3>
+<button class="active" data-page="home">Огляд курсу</button>
+<button data-page="m1">Модуль 1. Орієнтація</button>
+<button data-page="m2">Модуль 2. Завдання</button>
+<button data-page="m3">Модуль 3. Тестування</button>
+<button data-page="m4">Модуль 4. Планування</button>
+<button data-page="final">Підсумок і завершення</button>
+<div style="margin-top:18px"><div class="muted" style="font-size:12px;margin-bottom:6px">Прогрес прототипу</div><div class="progress"><span id="bar"></span></div><div id="progressText" class="muted" style="font-size:12px;margin-top:5px">0 із 4 модулів</div></div>
+</nav>
+<main>
+<section id="home" class="page">
+<div class="hero"><span class="pill">Навчально-практичний тренінг · 2 тижні</span><h1>Робота з освітнім порталом</h1><p>Від першого входу до самостійного навчання. Навчіться знаходити матеріали, подавати роботи, проходити тести та планувати навчання.</p>
+<div class="stats"><div class="stat">⏱ 6–8 годин</div><div class="stat">🎯 5 результатів навчання</div><div class="stat">📱 Для смартфона й комп’ютера</div></div></div>
+<div class="panel"><h2>Для кого цей курс?</h2><p>Для студентів першого курсу та всіх, хто хоче впевнено користуватися освітнім порталом. Потрібні лише базові навички роботи з браузером і файлами.</p><h2>Мета курсу</h2><p>Сформувати практичні навички самостійного використання порталу для виконання основних навчальних дій.</p><h2>Після курсу ви зможете</h2><ul><li>знаходити дисципліни, матеріали й оголошення;</li><li>пояснювати призначення основних розділів;</li><li>завантажувати роботи та перевіряти їх подання;</li><li>проходити тести й аналізувати результати;</li><li>планувати роботу за календарем і дедлайнами.</li></ul></div>
+<div class="panel"><h2>Як проходити курс</h2><ol><li>Пройдіть коротке вхідне опитування.</li><li>Опрацьовуйте модулі послідовно.</li><li>Виконуйте практичні вправи та перевірки.</li><li>За потреби звертайтеся до ШІ-помічника або викладача.</li><li>Виконайте підсумковий сценарій.</li></ol><button class="primary" onclick="show('m1')">Почати навчання</button></div>
+</section>
+<section id="m1" class="page hidden"><div class="panel"><span class="tag">МОДУЛЬ 1 · 1–1,5 ГОДИНИ</span><h2>Орієнтація в освітньому порталі</h2><p>Навчіться орієнтуватися в особистому кабінеті, знаходити дисципліни, матеріали та оголошення.</p><h3>Матеріали</h3><ul><li>Відео «Огляд особистого кабінету»</li><li>Інструкція зі скриншотами «Як знайти дисципліну»</li><li>Схема «Структура сторінки курсу»</li></ul><h3>Практична активність</h3><div class="step">Знайдіть у демонстраційному курсі задану дисципліну, один навчальний файл і останнє оголошення.</div><h3>Перевірка</h3><p>Практичний пошуковий сценарій. Успіх: знайдено всі три об’єкти.</p><button class="secondary" onclick="alert('Підказка: почніть зі списку курсів, потім відкрийте потрібну дисципліну.')">Отримати підказку</button> <button class="primary" onclick="complete(1)">Позначити модуль виконаним</button><div id="fb1" class="feedback hidden">Модуль позначено виконаним. Можна переходити до модуля 2.</div></div></section>
+<section id="m2" class="page hidden"><div class="panel"><span class="tag">МОДУЛЬ 2 · 1,5–2 ГОДИНИ</span><h2>Робота з навчальними завданнями</h2><p>Розберіться з умовами завдань, форматами файлів і підтвердженням подання.</p><h3>Матеріали</h3><ul><li>Відео «Як надіслати виконану роботу»</li><li>Покрокова інструкція з прикладами</li></ul><h3>Практична активність</h3><div class="step">Прикріпіть тренувальний файл до тестового завдання та перевірте статус подання.</div><h3>Оцінювання і зворотний зв’язок</h3><p>Практичне подання файлу за чеклістом; підказка системи та пояснення типових помилок.</p><button class="primary" onclick="complete(2)">Позначити модуль виконаним</button><div id="fb2" class="feedback hidden">Модуль позначено виконаним. Можна переходити до модуля 3.</div></div></section>
+<section id="m3" class="page hidden"><div class="panel"><span class="tag">МОДУЛЬ 3 · 1–1,5 ГОДИНИ</span><h2>Онлайн-тестування та аналіз результатів</h2><p>Навчіться проходити тести, переглядати бали й визначати теми для повторення.</p><h3>Матеріали</h3><ul><li>Демонстрація тестування</li><li>Пам’ятка «Спроби, час і результати»</li></ul><h3>Інтерактивна активність</h3><div class="step">Пройдіть тренувальний тест, відкрийте результат і визначте одну тему, яку варто повторити.</div><h3>Оцінювання</h3><p>Тест і короткий аналіз помилок з автоматичними поясненнями.</p><button class="primary" onclick="complete(3)">Позначити модуль виконаним</button><div id="fb3" class="feedback hidden">Модуль позначено виконаним. Можна переходити до модуля 4.</div></div></section>
+<section id="m4" class="page hidden"><div class="panel"><span class="tag">МОДУЛЬ 4 · 1–1,5 ГОДИНИ</span><h2>Планування навчання та контроль дедлайнів</h2><p>Використовуйте календар і нагадування, щоб своєчасно виконувати навчальні завдання.</p><h3>Матеріали</h3><ul><li>Відео «Календар курсу»</li><li>Шаблон тижневого плану</li></ul><h3>Практична активність</h3><div class="step">Складіть план на тиждень за переліком завдань і визначте найближчий дедлайн.</div><h3>Оцінювання</h3><p>Перевірка плану за критеріями: усі завдання враховані, дати правильні, пріоритети визначені.</p><button class="primary" onclick="complete(4)">Позначити модуль виконаним</button><div id="fb4" class="feedback hidden">Усі модулі пройдено. Відкрийте підсумковий етап.</div></div></section>
+<section id="final" class="page hidden"><div class="panel"><span class="tag">ЗАВЕРШЕННЯ КУРСУ</span><h2>Підсумковий практичний сценарій</h2><p>Виконайте послідовно: знайдіть дисципліну; відкрийте матеріал; перегляньте завдання й дедлайн; прикріпіть файл у тренувальному завданні; пройдіть тест; перевірте результат; складіть короткий план наступних дій.</p><h3>Умови успішного завершення</h3><ul><li>Опрацьовано всі чотири модулі.</li><li>Виконано практичні завдання кожного модуля.</li><li>Підсумковий сценарій виконано за чеклістом.</li></ul><p class="muted">У реальному курсі викладач підтверджує виконання підсумкового завдання та надає рекомендації.</p><button class="secondary" onclick="show('home')">Повернутися до огляду</button></div></section>
+</main></div><footer>Навчальний прототип · «Робота з освітнім порталом»</footer>
+<script>
+const done=new Set();
+function show(id){document.querySelectorAll('.page').forEach(x=>x.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo(0,0)}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>show(b.dataset.page)));
+function complete(n){done.add(n);document.getElementById('fb'+n).classList.remove('hidden');document.getElementById('bar').style.width=(done.size/4*100)+'%';document.getElementById('progressText').textContent=done.size+' із 4 модулів';}
+</script></body></html>
